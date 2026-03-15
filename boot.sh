@@ -18,24 +18,22 @@ clear
 echo -e "\n$ansi_art\n"
 
 # Use custom branch if instructed, otherwise default to master
-OMARCHY_REF="${OMARCHY_REF:-master}"
+OMARCHY_REF="${OMARCHY_REF:-debian-version}"
 
 # Set mirror based on branch
 if [[ $OMARCHY_REF == "dev" ]]; then
   export OMARCHY_MIRROR=edge
-  echo 'Server = https://mirror.omarchy.org/$repo/os/$arch' | sudo tee /etc/pacman.d/mirrorlist >/dev/null
 elif [[ $OMARCHY_REF == "rc" ]]; then
   export OMARCHY_MIRROR=rc
-  echo 'Server = https://rc-mirror.omarchy.org/$repo/os/$arch' | sudo tee /etc/pacman.d/mirrorlist >/dev/null
 else
   export OMARCHY_MIRROR=stable
-  echo 'Server = https://stable-mirror.omarchy.org/$repo/os/$arch' | sudo tee /etc/pacman.d/mirrorlist >/dev/null
 fi
 
-sudo pacman -Syu --noconfirm --needed git
+sudo apt-get update
+sudo apt-get install -y --no-install-recommends git
 
-# Use custom repo if specified, otherwise default to basecamp/omarchy
-OMARCHY_REPO="${OMARCHY_REPO:-basecamp/omarchy}"
+# Use custom repo if specified, otherwise default to alfonsocv12/omarchy
+OMARCHY_REPO="${OMARCHY_REPO:-alfonsocv12/omarchy}"
 
 echo -e "\nCloning Omarchy from: https://github.com/${OMARCHY_REPO}.git"
 rm -rf ~/.local/share/omarchy/

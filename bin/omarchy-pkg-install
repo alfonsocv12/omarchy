@@ -4,7 +4,7 @@
 
 fzf_args=(
   --multi
-  --preview 'pacman -Sii {1}'
+  --preview 'apt-cache show {1}'
   --preview-label='alt-p: toggle description, alt-j/k: scroll, tab: multi-select'
   --preview-label-pos='bottom'
   --preview-window 'down:65%:wrap'
@@ -14,12 +14,12 @@ fzf_args=(
   --color 'pointer:green,marker:green'
 )
 
-pkg_names=$(pacman -Slq | fzf "${fzf_args[@]}")
+pkg_names=$(apt-cache pkgnames | sort | fzf "${fzf_args[@]}")
 
 if [[ -n $pkg_names ]]; then
   source omarchy-sudo-keepalive
 
-  # Convert newline-separated selections to space-separated for pacman
-  echo "$pkg_names" | tr '\n' ' ' | xargs sudo pacman -S --noconfirm
+  # Convert newline-separated selections to space-separated for apt
+  echo "$pkg_names" | tr '\n' ' ' | xargs sudo apt-get install -y --no-install-recommends
   omarchy-show-done
 fi

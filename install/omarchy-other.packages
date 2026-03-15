@@ -2,68 +2,34 @@
 # Utilized by ISO builder to ensure package availability in the ISO
 
 autoconf-archive
-asusctl
-base
-base-devel
-broadcom-wl
+build-essential
 btrfs-progs
 dart
 dkms
-egl-wayland
 git
-gst-plugin-pipewire
-gtk4-layer-shell
 htop
 intltool
 iwd
-jdk-openjdk
-libpulse
-libsass
-intel-ipu7-camera
-intel-media-driver
-libva-intel-driver
-libva-nvidia-driver
-limine
-limine-mkinitcpio-hook
-limine-snapper-sync
-linux
-linux-firmware
-linux-headers
-macbook12-spi-driver-dkms
-nvidia-580xx-dkms
-nvidia-dkms
-nvidia-open-dkms
-nvidia-580xx-utils
-nvidia-utils
-lib32-nvidia-580xx-utils
-lib32-nvidia-utils
+openjdk-17-jdk
+libpulse0
+sassc
+intel-media-va-driver
+linux-image-amd64
+linux-firmware-free
+linux-headers-amd64
+nvidia-driver
 pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
 qt6-wayland
-sassc
 snapper
 thermald
-webp-pixbuf-loader
 wget
-yay-debug
-tuxedo-drivers-nocompatcheck-dkms
-yt6801-dkms
-zram-generator
+zram-tools
 
 # Vulkan drivers (auto-detected by hardware)
-vulkan-intel
-vulkan-radeon
-vulkan-asahi
+mesa-vulkan-drivers
 
 # Surface laptop support packages
-linux-firmware-marvell
-
-# T2 MacBook support packages
-apple-bcm-firmware
-apple-t2-audio-config
-linux-t2
-linux-t2-headers
-t2fanrd
-tiny-dfr
+firmware-marvell

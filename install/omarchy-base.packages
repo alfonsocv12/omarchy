@@ -1,8 +1,6 @@
 # Omarchy core package list translated for Debian
 # This file is also used by the ISO builder when determining needs
 
-1password-cli
-aether
 alacritty
 alsa-utils
 avahi-daemon
@@ -17,9 +15,8 @@ cups-browsed
 cups-filters
 printer-driver-cups-pdf
 docker.io
-docker-buildx-plugin
-docker-compose-plugin
-dotnet-sdk-9.0
+docker-buildx
+docker-compose
 evince
 exfatprogs
 fzf
@@ -29,7 +26,6 @@ fcitx5-frontend-qt5
 fd-find
 ffmpegthumbnailer
 fontconfig
-gh
 gnome-calculator
 gnome-keyring
 gnome-themes-extra
@@ -40,7 +36,6 @@ hypridle
 hyprland
 hyprlock
 hyprpicker
-hyprsunset
 imagemagick
 imv
 inetutils-tools

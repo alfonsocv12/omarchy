@@ -29,8 +29,8 @@ else
   export OMARCHY_MIRROR=stable
 fi
 
-sudo apt-get update
-sudo apt-get install -y --no-install-recommends git
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends git
 
 # Use custom repo if specified, otherwise default to alfonsocv12/omarchy
 OMARCHY_REPO="${OMARCHY_REPO:-alfonsocv12/omarchy}"

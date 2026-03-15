@@ -3,6 +3,6 @@ if [[ -n ${OMARCHY_ONLINE_INSTALL:-} ]]; then
   omarchy-pkg-add build-essential
 
   # Configure apt
-  sudo apt-get update
-  sudo apt-get full-upgrade -y
+  sudo DEBIAN_FRONTEND=noninteractive apt-get update
+  sudo DEBIAN_FRONTEND=noninteractive apt-get full-upgrade -y
 fi

@@ -6,6 +6,7 @@ alsa-utils
 avahi-daemon
 bash-completion
 bat
+bluez
 brightnessctl
 btop
 chromium

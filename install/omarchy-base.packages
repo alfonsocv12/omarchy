@@ -17,7 +17,6 @@ printer-driver-cups-pdf
 docker.io
 docker-buildx
 docker-compose
-evince
 exfatprogs
 fzf
 fcitx5
@@ -54,6 +53,7 @@ luarocks
 mako-notifier
 man-db
 libmariadb-dev
+mise
 mpv
 nautilus
 python3-nautilus

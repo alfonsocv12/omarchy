@@ -67,6 +67,7 @@ libnss-mdns
 neovim
 obs-studio
 pamixer
+pinentry-curses
 playerctl
 plocate
 plymouth
